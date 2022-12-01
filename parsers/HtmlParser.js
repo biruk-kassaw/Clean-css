@@ -1,8 +1,8 @@
 const jsdom = require('jsdom');
-const readFile = require("../utils/ReadFile");
+const {readFile} = require("../utils/ReadFile");
 const { JSDOM } = jsdom;
 
-exports.parsedHtml = async(htmlFilePath) => {
+exports.HtmlParser = async(htmlFilePath) => {
   try {
     const html = await readFile(htmlFilePath);
     const dom = new JSDOM(html);
