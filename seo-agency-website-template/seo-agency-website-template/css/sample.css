@@ -99,3 +99,14 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+.zeberga{
+  hello:var(--bs-black);
+}
+[class^="row"] {
+  background: #ffff00;
+}
+
+a::after{
+  hell: var(--bs-highlight-bg)
+}
