@@ -2,7 +2,7 @@ const {CssParser} = require("./parsers/CssParser");
 const {HtmlParser} = require("./parsers/HtmlParser");
 const {trimSelector, removePsudoSelectors} = require("./utils/TrimString");
 
-(async () => {
+exports.removeUnusedCss = async (req, res) => {
   const parsedHtml = await HtmlParser("./seo-agency-website-template/seo-agency-website-template/index.html")
   const parsedCSS = await CssParser("./seo-agency-website-template/seo-agency-website-template/css/bootstrap.min.css")
 
@@ -67,4 +67,8 @@ const {trimSelector, removePsudoSelectors} = require("./utils/TrimString");
   console.log("not used css")
   console.log("***************************************************************************************")
   console.log(notUsedCss)
-})();
+  res.status(200).json({
+    status : "success",
+    data:{usedCss,notUsedCss}
+  })
+}

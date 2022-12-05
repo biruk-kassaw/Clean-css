@@ -6,5 +6,23 @@
     "jotform-css.js": "^1.0.1",
     "jsdom": "^20.0.3",
     "list-selectors": "^2.0.1"
-  }
+  },
+  "name": "un-used-css-remover",
+  "description": "This code removes the unused part from your CSS file by analyzing your HTML",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biruk-kassaw/Un-used-css-remover.git"
+  },
+  "author": "Biruk Kassaw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/biruk-kassaw/Un-used-css-remover/issues"
+  },
+  "homepage": "https://github.com/biruk-kassaw/Un-used-css-remover#readme"
 }
