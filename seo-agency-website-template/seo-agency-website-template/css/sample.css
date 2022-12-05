@@ -107,6 +107,6 @@ body {
   background: #ffff00;
 }
 
-a::after{
+h {
   hell: var(--bs-highlight-bg)
 }
