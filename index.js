@@ -55,18 +55,10 @@ exports.removeUnusedCss = async (req, res) => {
           notUsedCss.push(element)
         }
       } catch (error) {
-        // console.log("**************************************************")
-        // console.log(trimedSelector)
-        // console.log(element)
         usedCss.push(element)
       }
     }
   });
-  console.log("used css")
-  console.log(usedCss)
-  console.log("not used css")
-  console.log("***************************************************************************************")
-  console.log(notUsedCss)
   res.status(200).json({
     status : "success",
     data:{usedCss,notUsedCss}
