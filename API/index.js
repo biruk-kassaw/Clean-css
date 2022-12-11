@@ -3,8 +3,9 @@ const {HtmlParser} = require("./parsers/HtmlParser");
 const {trimSelector, removePsudoSelectors} = require("./utils/TrimString");
 
 exports.removeUnusedCss = async (req, res) => {
-  const parsedHtml = await HtmlParser("./seo-agency-website-template/seo-agency-website-template/index.html")
-  const parsedCSS = await CssParser("./seo-agency-website-template/seo-agency-website-template/css/bootstrap.min.css")
+
+  const parsedHtml = await HtmlParser(req.body.html, isfile=false)
+  const parsedCSS = await CssParser(req.body.css, isfile=false)
 
   usedCss = []
   notUsedCss = []
