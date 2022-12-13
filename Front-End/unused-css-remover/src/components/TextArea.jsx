@@ -3,13 +3,16 @@ import React, { Component } from "react";
 class TextArea extends Component {
   render() {
     return (
-      <div class="form-floating">
+      <div className="form-floating">
         <textarea
+          onChange={this.props.onChange}
+          value={this.props.value}
+          name={this.props.name}
           className=" textArea form-control"
-          placeholder="Leave a comment here"
           id="floatingTextarea"
+          style={{ height: "250px" }}
         ></textarea>
-        <label for="floatingTextarea">{this.props.label}</label>
+        <label For="floatingTextarea">{this.props.label}</label>
       </div>
     );
   }

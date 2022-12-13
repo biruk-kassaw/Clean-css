@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import Form from './components/Form';
 import NavBar from './components/NavBar';
-import TextArea from './components/TextArea';
 
 class App extends Component {
   state = {  } 
@@ -18,16 +18,8 @@ class App extends Component {
             <li className='m-2'>Click Remove css button</li>
             <li className='m-2'>Use your optimized css</li>
           </ul>
-        </div>
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <TextArea label="Insert Your HTML Here"/>
-            </div>
-            <div className="col">
-              <TextArea label="Insert Your Css Here"/>
-            </div>
-          </div>
+          
+          <Form/>
         </div>
       </div>
     );

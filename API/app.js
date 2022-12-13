@@ -6,7 +6,7 @@ app.use(express.json())
 app.get("/", (req,res)=>{
     res.status(200).send("hello")
 })
-app.get("/api/v1/remove-unused-css", removeUnusedCss)
+app.post("/api/v1/remove-unused-css", removeUnusedCss)
 
 const port = 4000;
 app.listen(port,()=>{
