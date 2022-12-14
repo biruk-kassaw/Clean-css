@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import TextArea from "./TextArea";
-
+import { getOptimizedCss } from "../services/Remover";
 class Form extends Component {
   state = {
     html: "",
@@ -14,9 +14,11 @@ class Form extends Component {
     this.setState(current);
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
     // send it to the server and make the response into the optimized css
+    let optimizedCss = await getOptimizedCss(this.state.html, this.state.css);
+    this.setState({ optimizedCss: optimizedCss });
 
     console.log(this.state);
   };
@@ -47,7 +49,7 @@ class Form extends Component {
           </div>
 
           <div className="container text-center mt-3 mb-3">
-            <button className="btn btn-primary">Remove Unused Css</button>
+            <button className="btn btn-primary">Clean Up Css</button>
           </div>
         </form>
 

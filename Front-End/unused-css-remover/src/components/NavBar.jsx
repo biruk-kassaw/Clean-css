@@ -5,10 +5,10 @@ class NavBar extends Component {
   render() {
     return (
       <>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light mb-5">
+        <nav className="navbar shadow-sm fixed-top navbar-expand-lg navbar-light bg-light mb-5">
           <div className="container">
-            <a className="navbar-brand" href="#">
-              Navbar
+            <a className="navbar-brand logo" href="#">
+              CLEAN CSS
             </a>
             <button
               className="navbar-toggler"
@@ -24,13 +24,13 @@ class NavBar extends Component {
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav">
                 <a className="nav-link active" aria-current="page" href="#">
-                  Home
+                  HOME
                 </a>
                 <a className="nav-link" href="#">
-                  Features
+                  CONTRIBUTE
                 </a>
                 <a className="nav-link" href="#">
-                  Pricing
+                  BLOG
                 </a>
               </div>
             </div>
