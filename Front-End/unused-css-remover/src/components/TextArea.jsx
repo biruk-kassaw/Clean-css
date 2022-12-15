@@ -10,7 +10,7 @@ class TextArea extends Component {
           name={this.props.name}
           className=" textArea form-control"
           id="floatingTextarea"
-          style={{ height: "250px" }}
+          style={{ height: "250px", fontFamily: "monospace" }}
         ></textarea>
         <label For="floatingTextarea">{this.props.label}</label>
       </div>

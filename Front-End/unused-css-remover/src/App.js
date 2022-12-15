@@ -9,23 +9,24 @@ class App extends Component {
   render() { 
     return (
       <>
-      
+      {/* <Background/> */}
       <div className='main'>
         <NavBar/>
         
-        <div className='container mt-5 mb-5'>
-          <h1 className='display-6 mb-5 '>Easily Clean Up Your Unused CSS Rules</h1>
-          <h5>Usage:</h5>
-          <Background/>
+        <div className='container mb-5 main-container'>
+          <h1 className='display-6 mb-5 main-header'>Easily Clean Up Your Unused CSS Rules</h1>
+          <h5 className="lead"><b>Usage:</b></h5>
+          
           <ul>
-            <li className='m-2'>Copy&paste your HTML and CSS into boxes below</li>
-            <li className='m-2'>Click Remove css button</li>
-            <li className='m-2'>Use your optimized css</li>
+            <li className='m-2 lead'>Copy&paste your HTML and CSS into boxes below</li>
+            <li className='m-2 lead'>Click Remove css button</li>
+            <li className='m-2 lead'>Use your optimized css</li>
           </ul>
           
           <Form/>
         </div>
       </div>
+      
       </>
     );
   }

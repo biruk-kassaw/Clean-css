@@ -1,5 +1,5 @@
-import Particles from "particlesjs";
 import React, { Component } from "react";
+import Particles from "particlesjs";
 
 class Background extends Component {
   render() {
@@ -7,7 +7,7 @@ class Background extends Component {
       <Particles
         options={{
           maxParticles: 200,
-          color: "#48F2E3",
+          color: "black",
           connectParticles: false,
         }}
       />

@@ -5,7 +5,7 @@ class NavBar extends Component {
   render() {
     return (
       <>
-        <nav className="navbar shadow-sm fixed-top navbar-expand-lg navbar-light bg-light mb-5">
+        <nav className="navbar shadow-sm fixed-top navbar-expand-lg navbar-light bg-light mb-5 nav-bar">
           <div className="container">
             <a className="navbar-brand logo" href="#">
               CLEAN CSS

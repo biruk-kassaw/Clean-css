@@ -49,7 +49,7 @@ class Form extends Component {
           </div>
 
           <div className="container text-center mt-3 mb-3">
-            <button className="btn btn-primary">Clean Up Css</button>
+            <button className="btn  my-button">Clean Up Css</button>
           </div>
         </form>
 
@@ -57,7 +57,7 @@ class Form extends Component {
           <h6 className="mb-3">Your Optimized Css</h6>
           <TextArea label="Your Optimized CSS" />
           <div className="container text-center mt-3">
-            <button className="btn btn-primary">Copy To Clipboard</button>
+            <button className="btn my-button">Copy To Clipboard</button>
           </div>
         </div>
       </>
