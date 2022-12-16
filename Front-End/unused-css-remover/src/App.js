@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <>
       <Background/>
-      {/* <div className='main'>
+      <div className='main'>
         <NavBar/>
         
         <div className='container mb-5 main-container'>
@@ -33,7 +33,7 @@ class App extends Component {
           <Form/>
         </div>
       </div>
-       */}
+      
       </>
     );
   }
