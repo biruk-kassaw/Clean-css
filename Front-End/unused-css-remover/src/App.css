@@ -19,17 +19,32 @@ body{
   color: #7A26C1;
 }
 
+ul.main-list{
+  list-style-type: none;
+}
+
+.main-list li{
+  font-size: medium;
+
+}
+.list-icons {
+  color: #7A26C1;
+}
+
 .main-header {
   color: #7A26C1;
 }
 
-.background {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  z-index: 0;
+input[type="text"], textarea {
+  outline: none;
+  box-shadow:none !important;
+  border:1px solid #ccc !important;
 }
+
+.textArea:focus {
+  border-color: #7A26C1 !important;
+}
+
 
 .logo {
   color: #7A26C1;

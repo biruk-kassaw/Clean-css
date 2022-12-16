@@ -54,8 +54,8 @@ class Form extends Component {
         </form>
 
         <div className="container">
-          <h6 className="mb-3">Your Optimized Css</h6>
-          <TextArea label="Your Optimized CSS" />
+          <h6 className="mb-3">Your Clean Css</h6>
+          <TextArea label="Your Clean CSS" />
           <div className="container text-center mt-3">
             <button className="btn my-button">Copy To Clipboard</button>
           </div>
