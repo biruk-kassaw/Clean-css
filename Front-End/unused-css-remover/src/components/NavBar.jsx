@@ -1,11 +1,14 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
+const github = <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>;
 class NavBar extends Component {
   state = {};
   render() {
     return (
       <>
-        <nav className="navbar shadow-sm fixed-top navbar-expand-lg navbar-light bg-light mb-5 nav-bar">
+        <nav className="navbar shadow fixed-top navbar-expand-lg navbar-light bg-light mb-5 nav-bar">
           <div className="container">
             <a className="navbar-brand logo" href="#">
               CLEAN CSS
@@ -23,14 +26,18 @@ class NavBar extends Component {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a className="nav-link " aria-current="page" href="#">
                   HOME
                 </a>
-                <a className="nav-link" href="#">
-                  CONTRIBUTE
-                </a>
+
                 <a className="nav-link" href="#">
                   BLOG
+                </a>
+                <a
+                  className="nav-link"
+                  href="https://github.com/biruk-kassaw/Un-used-css-remover"
+                >
+                  CONTRIBUTE {github}
                 </a>
               </div>
             </div>

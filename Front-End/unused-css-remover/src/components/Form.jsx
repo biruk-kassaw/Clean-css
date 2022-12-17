@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 import TextArea from "./TextArea";
 import { getOptimizedCss } from "../services/Remover";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 class Form extends Component {
   state = {
     html: "",
     css: "",
     optimizedCss: "",
   };
+
+  notify = () => toast("copied to clipboard");
 
   handleChange = (e) => {
     let current = { ...this.state };
@@ -54,12 +59,38 @@ class Form extends Component {
         </form>
 
         <div className="container">
-          <h6 className="mb-3">Your Clean Css</h6>
-          <TextArea label="Your Clean CSS" />
-          <div className="container text-center mt-3">
-            <button className="btn my-button">Copy To Clipboard</button>
+          <div className="bottom-container">
+            <h6 className="mb-3">Your Clean Css</h6>
+            <TextArea
+              label="Your Clean CSS"
+              name="optimizedCss"
+              onChange={this.handleChange}
+            />
+            <div className="container text-center mt-3">
+              <button
+                className="btn my-button"
+                onClick={() => {
+                  navigator.clipboard.writeText(this.state.optimizedCss);
+                  this.notify();
+                }}
+              >
+                Copy To Clipboard
+              </button>
+            </div>
           </div>
         </div>
+        <ToastContainer
+          position="bottom-center"
+          autoClose={500}
+          hideProgressBar
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss={false}
+          draggable={false}
+          pauseOnHover
+          theme="light"
+        />
       </>
     );
   }

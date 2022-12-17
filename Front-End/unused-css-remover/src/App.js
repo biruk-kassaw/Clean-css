@@ -1,10 +1,11 @@
-import Background from "./components/background/Background";
+// import Background from "./components/background/Background";
 import React, { Component } from 'react';
 import './App.css';
 import Form from './components/Form';
 import NavBar from './components/NavBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import Footer from './components/Footer';
 
 const element = <FontAwesomeIcon icon={faArrowRight} shake className='list-icons'/>
 
@@ -13,7 +14,7 @@ class App extends Component {
   render() { 
     return (
       <>
-      <Background/>
+      {/* <Background/> */}
       <div className='main'>
         <NavBar/>
         
@@ -24,8 +25,8 @@ class App extends Component {
               
               <ul className="main-list">
                 <li className='m-2 lead'> {element} <span className='ms-2'> Copy&paste your HTML and CSS into boxes below</span></li>
-                <li className='m-2 lead'> {element} <span className='ms-2'>Click Remove css button</span></li>
-                <li className='m-2 lead'> {element} <span className='ms-2'>Use your optimized css</span></li>
+                <li className='m-2 lead'> {element} <span className='ms-2'>Click Clean up css button</span></li>
+                <li className='m-2 lead'> {element} <span className='ms-2'>Use your clean css</span></li>
               </ul>
           </div>
           
@@ -33,7 +34,7 @@ class App extends Component {
           <Form/>
         </div>
       </div>
-      
+      <Footer/>
       </>
     );
   }
