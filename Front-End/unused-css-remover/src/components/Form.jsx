@@ -6,8 +6,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 class Form extends Component {
   state = {
-    html: "",
-    css: "",
+    html: "<p>h</p>",
+    css: "a{f:j}",
     optimizedCss: "",
   };
 
@@ -22,10 +22,12 @@ class Form extends Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     // send it to the server and make the response into the optimized css
-    let optimizedCss = await getOptimizedCss(this.state.html, this.state.css);
+    let response = await getOptimizedCss(this.state.html, this.state.css);
+    let optimizedCss = response.data.usedCss;
+    console.log(optimizedCss);
     this.setState({ optimizedCss: optimizedCss });
 
-    console.log(this.state);
+    // console.log(this.state);
   };
 
   render() {

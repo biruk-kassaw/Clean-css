@@ -46,9 +46,7 @@ class Footer extends Component {
               <h6>Quick Links</h6>
               <ul className="footer-links">
                 <li>
-                  <a href="#">
-                    Contribute <i class="fas fa-wrench"></i>
-                  </a>
+                  <a href="#">Contribute</a>
                 </li>
                 <li>
                   <a href="#">Blog</a>
@@ -78,6 +76,7 @@ class Footer extends Component {
             <div className="col-md-4 col-sm-6 col-xs-12">
               <ul className="social-icons">
                 <li>
+                  <span>made with ❤️ by Biruk </span>
                   <a
                     className="facebook"
                     target="_blank"
