@@ -28,7 +28,7 @@ exports.removeUnusedCss = async (req, res) => {
         let tempSelector = ""
         for (let char = 0; char < trimedSelector.length; char++) {
           if (trimedSelector[char] == ";") {
-            let newAtRule = {selector: tempSelector + ";", type : "udn", styles: tempSelector + ";"}
+            let newAtRule = {selector: tempSelector + ";", type : "udn", styles: tempSelector + ";\n"}
             usedCss.push(newAtRule)
             tempSelector = ""
           }else{
@@ -66,6 +66,8 @@ exports.removeUnusedCss = async (req, res) => {
       }
     }
   });
+  console.log(usedCss[7])
+  console.log(usedCss[9])
   res.status(200).json({
     status : "success",
     data:{usedCss,notUsedCss}

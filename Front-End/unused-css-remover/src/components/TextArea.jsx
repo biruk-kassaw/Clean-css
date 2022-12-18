@@ -12,7 +12,7 @@ class TextArea extends Component {
           id="floatingTextarea"
           style={{ height: "250px", fontFamily: "monospace" }}
         ></textarea>
-        <label For="floatingTextarea">{this.props.label}</label>
+        <label htmlFor="floatingTextarea">{this.props.label}</label>
       </div>
     );
   }
