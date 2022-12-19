@@ -32,41 +32,39 @@ exports.parseToString = (css) => {
 
     return cssString
 }
-let sample = [
-    {
-    selector: "@keyframes",
-    type: "keyframes",
-    styles: "@keyframes progress-bar-stripes {\n  0% {\n    background-position-x: 1rem;\n  }\n}"
-    },
-    {
-        selector: "p",
-        rules: [
-          {
-            directive: "margin-top",
-            value: "0"
-          },
-          {
-            directive: "margin-bottom",
-            value: "1rem"
-          }
-        ]
-    },
-    {
-        selector: "@media (min-width: 1200px)",
-        type: "media",
-        subStyles: [
-          {
-            selector: ".display-1",
-            rules: [
-              {
-                directive: "font-size",
-                value: "5rem"
-              }
-            ]
-          }
-        ]
-      }
-
-
-]
-console.log(this.parseToString(sample));
+// let sample = [
+//     {
+//     selector: "@keyframes",
+//     type: "keyframes",
+//     styles: "@keyframes progress-bar-stripes {\n  0% {\n    background-position-x: 1rem;\n  }\n}"
+//     },
+//     {
+//         selector: "p",
+//         rules: [
+//           {
+//             directive: "margin-top",
+//             value: "0"
+//           },
+//           {
+//             directive: "margin-bottom",
+//             value: "1rem"
+//           }
+//         ]
+//     },
+//     {
+//         selector: "@media (min-width: 1200px)",
+//         type: "media",
+//         subStyles: [
+//           {
+//             selector: ".display-1",
+//             rules: [
+//               {
+//                 directive: "font-size",
+//                 value: "5rem"
+//               }
+//             ]
+//           }
+//         ]
+//       }
+// ]
+// console.log(this.parseToString(sample));

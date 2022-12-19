@@ -1,7 +1,7 @@
 const {CssParser} = require("./parsers/CssParser");
 const {HtmlParser} = require("./parsers/HtmlParser");
 const {trimSelector, removePsudoSelectors} = require("./utils/TrimString");
-
+const {parseToString} = require("./parsers/parseToCss")
 exports.removeUnusedCss = async (req, res) => {
   if (!req.body.html || !req.body.css) {
     res.status(401).json({
@@ -70,7 +70,7 @@ exports.removeUnusedCss = async (req, res) => {
   console.log(usedCss[9])
   res.status(200).json({
     status : "success",
-    data:{usedCss,notUsedCss}
+    data:{ usedCss:parseToString(usedCss), notUsedCss:parseToString(notUsedCss)}
   })
 }
 }

@@ -8,7 +8,8 @@ class Form extends Component {
   state = {
     html: "<p>h</p>",
     css: "a{f:j}",
-    optimizedCss: "",
+    optimizedCss: "ans",
+    loading: false,
   };
 
   notify = () => toast("copied to clipboard");
@@ -22,12 +23,12 @@ class Form extends Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     // send it to the server and make the response into the optimized css
+    this.setState({ loading: true });
+
     let response = await getOptimizedCss(this.state.html, this.state.css);
     let optimizedCss = response.data.usedCss;
-    console.log(optimizedCss);
-    this.setState({ optimizedCss: optimizedCss });
 
-    // console.log(this.state);
+    this.setState({ optimizedCss: optimizedCss, loading: false });
   };
 
   render() {
@@ -56,7 +57,16 @@ class Form extends Component {
           </div>
 
           <div className="container text-center mt-3 mb-3">
-            <button className="btn  my-button">Clean Up Css</button>
+            <button className="btn  my-button" disabled={this.state.loading}>
+              {this.state.loading && (
+                <span
+                  class="spinner-border spinner-border-sm me-2"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+              )}
+              Clean Up Css
+            </button>
           </div>
         </form>
 
@@ -67,6 +77,7 @@ class Form extends Component {
               label="Your Clean CSS"
               name="optimizedCss"
               onChange={this.handleChange}
+              value={this.state.optimizedCss}
             />
             <div className="container text-center mt-3">
               <button
