@@ -12,10 +12,10 @@ exports.removeUnusedCss = async (req, res) => {
   try {
     const parsedHtml = await HtmlParser(req.body.html, isfile=false)
     const parsedCSS = await CssParser(req.body.css, isfile=false)
-
+    
     usedCss = []
     notUsedCss = []
-
+    
     parsedCSS.forEach(element => {
       // trim element.selector to remove /n 
       let trimedSelector = trimSelector(element.selector);
@@ -74,7 +74,7 @@ exports.removeUnusedCss = async (req, res) => {
 } catch (error) {
   return res.status(400).json({
     status: "failed",
-    data: error
+    error: error
   })
 }
 }

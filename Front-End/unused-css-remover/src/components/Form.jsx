@@ -10,6 +10,7 @@ class Form extends Component {
     css: "a{f:j}",
     optimizedCss: "ans",
     loading: false,
+    error: "",
   };
 
   notify = () => toast("copied to clipboard");
@@ -24,13 +25,19 @@ class Form extends Component {
     e.preventDefault();
     // send it to the server and make the response into the optimized css
     this.setState({ loading: true });
+    try {
+      let response = await getOptimizedCss(this.state.html, this.state.css);
+      let optimizedCss = response.data.usedCss;
 
-    let response = await getOptimizedCss(this.state.html, this.state.css);
-    // must implement error handling based on the response and status code show errors
-    console.log(response.data);
-    let optimizedCss = response.data.usedCss;
-
-    this.setState({ optimizedCss: optimizedCss, loading: false });
+      this.setState({ optimizedCss: optimizedCss, loading: false });
+    } catch (error) {
+      if (error.response && error.response.status >= 400) {
+        this.setState({ error: error.response.data.error, loading: false });
+      } else {
+        alert("Internal server error please try again later");
+        this.setState({ loading: false });
+      }
+    }
   };
 
   render() {
@@ -56,6 +63,15 @@ class Form extends Component {
                 />
               </div>
             </div>
+
+            {this.state.error && (
+              <div
+                class="alert alert-danger d-flex align-items-center container mt-3"
+                role="alert"
+              >
+                <div>{this.state.error}</div>
+              </div>
+            )}
           </div>
 
           <div className="container text-center mt-3 mb-3">
