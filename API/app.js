@@ -18,6 +18,6 @@ app.get("/", (req,res)=>{
 app.post("/api/v1/remove-unused-css", removeUnusedCss)
 
 const port = 4000;
-app.listen(port,()=>{
+app.listen( process.env.PORT || port,()=>{
     console.log(`listening at port ${ port }`)
 })

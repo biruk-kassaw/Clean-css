@@ -66,7 +66,7 @@ class Form extends Component {
 
             {this.state.error && (
               <div
-                class="alert alert-danger d-flex align-items-center container mt-3"
+                className="alert alert-danger d-flex align-items-center container mt-3"
                 role="alert"
               >
                 <div>{this.state.error}</div>
