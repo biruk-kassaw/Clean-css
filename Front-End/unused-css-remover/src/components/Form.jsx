@@ -26,6 +26,8 @@ class Form extends Component {
     this.setState({ loading: true });
 
     let response = await getOptimizedCss(this.state.html, this.state.css);
+    // must implement error handling based on the response and status code show errors
+    console.log(response.data);
     let optimizedCss = response.data.usedCss;
 
     this.setState({ optimizedCss: optimizedCss, loading: false });
@@ -60,7 +62,7 @@ class Form extends Component {
             <button className="btn  my-button" disabled={this.state.loading}>
               {this.state.loading && (
                 <span
-                  class="spinner-border spinner-border-sm me-2"
+                  className="spinner-border spinner-border-sm me-2"
                   role="status"
                   aria-hidden="true"
                 ></span>
