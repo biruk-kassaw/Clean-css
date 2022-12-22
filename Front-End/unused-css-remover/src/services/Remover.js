@@ -1,6 +1,6 @@
 import axios from "axios"
 
-let url = "http://localhost:4000/api/v1/remove-unused-css"
+let url = "https://clean-css-ol7w.onrender.com/api/v1/remove-unused-css"
 
 export const getOptimizedCss = async (html,css) =>{
     try{
