@@ -6,9 +6,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 class Form extends Component {
   state = {
-    html: "<p>h</p>",
-    css: "a{f:j}",
-    optimizedCss: "ans",
+    html: "",
+    css: "",
+    optimizedCss: "",
     loading: false,
     error: "",
   };
