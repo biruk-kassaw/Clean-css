@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Clean-css/tree/main/Front-End/unused-css-remover/static/css/main.42a0f19d.css",
+    "main.js": "/Clean-css/tree/main/Front-End/unused-css-remover/static/js/main.351b6f14.js",
+    "static/js/787.7193f2ee.chunk.js": "/Clean-css/tree/main/Front-End/unused-css-remover/static/js/787.7193f2ee.chunk.js",
+    "index.html": "/Clean-css/tree/main/Front-End/unused-css-remover/index.html",
+    "main.42a0f19d.css.map": "/Clean-css/tree/main/Front-End/unused-css-remover/static/css/main.42a0f19d.css.map",
+    "main.351b6f14.js.map": "/Clean-css/tree/main/Front-End/unused-css-remover/static/js/main.351b6f14.js.map",
+    "787.7193f2ee.chunk.js.map": "/Clean-css/tree/main/Front-End/unused-css-remover/static/js/787.7193f2ee.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42a0f19d.css",
+    "static/js/main.351b6f14.js"
+  ]
+}
