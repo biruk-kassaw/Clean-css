@@ -2,7 +2,7 @@
 
 ![Screenshot from 2022-12-28 10-34-21](https://user-images.githubusercontent.com/61546383/209775850-3f0f2760-2c58-45fa-8a60-b019afcc8fc0.png)
 <p align="center">
-  <img width="460" height="300" src="[http://www.fillmurray.com/460/300](https://user-images.githubusercontent.com/61546383/209775850-3f0f2760-2c58-45fa-8a60-b019afcc8fc0.png)">
+  <img src="https://user-images.githubusercontent.com/61546383/209775850-3f0f2760-2c58-45fa-8a60-b019afcc8fc0.png">
 </p>
 ## What Is Clean-Css
 When you are building a website, chances are that you are using a css framework like Bootstrap, Materializecss, etc... But you will only use a small set of the framework and a lot of unused css styles will be included.
