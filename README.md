@@ -10,7 +10,7 @@ This is where Clean-Css comes into play. Clean-Css analyzes your css. Then it ma
 ## Usage
 ### API
 By sendeng a post request which contains the html and css as a string to this url ***https://clean-css-ol7w.onrender.com/api/v1/remove-unused-css***     
-####example using axios:
+#### Example using axios:
 ```js
 axios.post('https://clean-css-ol7w.onrender.com/api/v1/remove-unused-css', {
     html: '<p>hello</p>',
