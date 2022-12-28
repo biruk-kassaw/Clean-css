@@ -38,7 +38,6 @@ Go to this website:  https://comfy-syrniki-a32afb.netlify.app/
 #### - Use your clean css
 ![Screenshot from 2022-12-28 11-20-14](https://user-images.githubusercontent.com/61546383/209781549-1b481f37-96ad-4d5e-bb2d-e99ac1a66b3f.png)
 
-Please note: 
-  UnCSS only runs the Javascript that is run on page load. It does not (and cannot) handle Javascript that runs on user interactions like button clicks.
-  
-## to run this project on your local machine
+#### Please note: 
+  Clean-Css only runs the Javascript that is run on page load. It does not (and cannot) handle Javascript that runs on user interactions like button clicks.
+  The code for both the website and API can be found in this repository
