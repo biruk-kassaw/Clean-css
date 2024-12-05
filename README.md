@@ -7,13 +7,11 @@
 
 
 ## What Is Clean-Css
-When you are building a website, chances are that you are using a css framework like Bootstrap, Materializecss, etc... But you will only use a small set of the framework and a lot of unused css styles will be included.
-
-This is where Clean-Css comes into play. Clean-Css analyzes your css. Then it matches the selectors used in your css files with your html files. It removes unused selectors from your css, resulting in smaller and optimized css file.
+Clean-Css is a tool designed to identify the CSS rules used by a website. It processes the HTML and CSS of a website, determines which CSS rules are actively applied to the content, and filters out unused CSS, providing a clear and optimized view of the CSS usage.
 
 ## Usage
 ### API
-By sendeng a post request which contains the html and css as a string to this url:   https://clean-css-ol7w.onrender.com/api/v1/remove-unused-css     
+You can analyze CSS usage programmatically by sending a POST request containing the HTML and CSS strings to the following API endpoint url:   https://clean-css-ol7w.onrender.com/api/v1/remove-unused-css     
 #### Example using axios:
 ```js
 axios.post('https://clean-css-ol7w.onrender.com/api/v1/remove-unused-css', {
