@@ -38,7 +38,6 @@ Go to this website:  https://comfy-syrniki-a32afb.netlify.app/
 ![Screenshot from 2022-12-28 11-20-14](https://user-images.githubusercontent.com/61546383/209781549-1b481f37-96ad-4d5e-bb2d-e99ac1a66b3f.png)
 
 #### Please note: 
- Clean-Css only runs the Javascript that is run on page load. It does not (and cannot) handle Javascript that runs on user interactions like button clicks.
-  
+ Clean-CSS only executes the JavaScript that runs on page load. It cannot handle JavaScript triggered by user interactions, such as button clicks.
   
  -> The code for both the website and API can be found in this repository
